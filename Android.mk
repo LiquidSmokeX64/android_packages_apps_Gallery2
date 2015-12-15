@@ -44,6 +44,9 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_JAVA_LIBRARIES += org.apache.http.legacy
 
+# Enable dexpreopt to speed boot time
+WITH_DEXPREOPT := true
+
 include $(BUILD_PACKAGE)
 
 ifeq ($(strip $(LOCAL_PACKAGE_OVERRIDES)),)
